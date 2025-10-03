@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Super Ai Dash</title>
+    <style>
+        h1{
+            font-size: 2.5rem;
+        }
+
+        form-field {
+            display: block;
+        }
+
+        .container{
+            display: grid;
+            grid-template-columns: 40% 60%;
+            grid-template-rows: 1fr; /* Simplified to single row */
+            min-height: 100vh;
+            max-width: 60vw;
+            margin: 0 auto; /* Centers the container */
+        }
+
+        #Login-info {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #667eea;
+            height: 100%
+        }
+        #Login-form {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section id ="Login-info">
+                <h1>Super Ai Dash</h1>
+                <p>Ai powered finance from Apes, alt-coins,<br>
+                    and fiat currency we promise you won't<br>
+                    lose <em><strong>all</strong></em> of it.</p>
+        </section>
+
+        <section id ="Login-form">
+        <form action="login.php" method = "post"></form>
+                <form-field>
+                        <label for="emailField">Email Address</label>
+                        <input type="email" name="email" id="emailField" placeholder="you@example.com" autofocus required/>
+                </form-field>
+
+                <form-field>
+                        <label for="passwordField"> Password </label>
+                        <input type="password" name="password" id="passwordField" placeholder="Enter your password"/>
+                </form-field>
+
+                <form-field>
+                    <button type="submit">Sign In
+                    </button>
+                </form-field>
+
+                <password-recovery>
+                    <a href="forgot.php" class="forgot">Forgot password?</a>
+                </password-recovery>
+        </section>
+    </div>
+</body>
+</html>
