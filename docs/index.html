@@ -2,23 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Super Ai Dash</title>
+    <title>Super AI Dash</title>
     <style>
-        h1{
+        h1 {
             font-size: 2.5rem;
         }
 
-        form-field {
-            display: block;
-        }
-
-        .container{
+        .container {
             display: grid;
             grid-template-columns: 40% 60%;
-            grid-template-rows: 1fr; /* Simplified to single row */
+            grid-template-rows: 1fr;
             min-height: 100vh;
-            max-width: 60vw;
-            margin: 0 auto; /* Centers the container */
+            max-width: 900px;
+            margin: 0 auto;
         }
 
         #Login-info {
@@ -26,51 +22,81 @@
             grid-column-end: 2;
             grid-row-start: 1;
             grid-row-end: 2;
+            justify-self: center;
+            align-self: center;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             background: #667eea;
-            height: 100%
+            max-height: 60vh;
+            padding: 1rem;
         }
         #Login-form {
             grid-column-start: 2;
             grid-column-end: 3;
             grid-row-start: 1;
             grid-row-end: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        #Login-form fieldset {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1rem; /* Space between groups */
+            border: none; /* Remove default fieldset border if not wanted */
+        }
+
+        #Login-form label {
+            margin-bottom: 0.5rem; /* Space between label and input */
+        }
+
+        #Login-form input {
+            width: 100%; /* Full width for alignment */
+        }
+
+        #Login-form button {
+            margin-top: 1rem; /* Space above button */
+            margin-left: 1rem;
+        }
+
+        #Login-form  p {
+            margin-left: 9rem;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <section id ="Login-info">
-                <h1>Super Ai Dash</h1>
-                <p>Ai powered finance from Apes, alt-coins,<br>
-                    and fiat currency we promise you won't<br>
-                    lose <em><strong>all</strong></em> of it.</p>
-        </section>
+<div class="container">
+    <section id="Login-info">
+        <h1>Super AI Dash</h1>
+        <p>AI powered finance from Apes, alt-coins,<br>
+            and fiat currency we promise you won't<br>
+            lose <em><strong>all</strong></em> of it.</p>
+    </section>
 
-        <section id ="Login-form">
-        <form action="login.php" method = "post"></form>
-                <form-field>
-                        <label for="emailField">Email Address</label>
-                        <input type="email" name="email" id="emailField" placeholder="you@example.com" autofocus required/>
-                </form-field>
+    <section id="Login-form">
+        <form action="login.php" method="post">
+            <fieldset>
+                <label for="emailField">Email Address</label>
+                <input type="email" name="email" id="emailField" placeholder="you@example.com" autofocus required/>
+            </fieldset>
 
-                <form-field>
-                        <label for="passwordField"> Password </label>
-                        <input type="password" name="password" id="passwordField" placeholder="Enter your password"/>
-                </form-field>
+            <fieldset>
+                <label for="passwordField">Password</label>
+                <input type="password" name="password" id="passwordField" placeholder="Enter your password"/>
+            </fieldset>
 
-                <form-field>
-                    <button type="submit">Sign In
-                    </button>
-                </form-field>
+            <button type="submit">Sign In</button>
 
-                <password-recovery>
-                    <a href="forgot.php" class="forgot">Forgot password?</a>
-                </password-recovery>
-        </section>
-    </div>
+            <p>
+                <a href="forgot.php" class="forgot">Forgot password?</a>
+            </p>
+        </form>
+    </section>
+</div>
 </body>
 </html>
